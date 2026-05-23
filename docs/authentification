@@ -1,0 +1,5 @@
+# Authentification
+The API uses API-Key authentification.
+
+## Headers
+Tracking-API-key: XXX
