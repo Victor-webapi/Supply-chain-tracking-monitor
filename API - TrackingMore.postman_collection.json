@@ -1,0 +1,206 @@
+{
+  "info": {
+    "_postman_id": "f2eba8bf-3654-4667-8efd-bb5876280ce3",
+    "name": "API - TrackingMore",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "37098836"
+  },
+  "item": [
+    {
+      "name": "API Status",
+      "request": {
+        "auth": {
+          "type": "apikey",
+          "apikey": [
+            {
+              "key": "key",
+              "value": "Tracking-Api-Key",
+              "type": "string"
+            },
+            {
+              "key": "value",
+              "value": "vy084zme-8c7v-yvco-iqle-9c8if32v2zol",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.trackingmore.com/v4/status",
+          "protocol": "https",
+          "host": [
+            "api",
+            "trackingmore",
+            "com"
+          ],
+          "path": [
+            "v4",
+            "status"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "API Create a tracking",
+      "request": {
+        "auth": {
+          "type": "apikey",
+          "apikey": [
+            {
+              "key": "key",
+              "value": "Tracking-Api-Key",
+              "type": "string"
+            },
+            {
+              "key": "value",
+              "value": "vy084zme-8c7v-yvco-iqle-9c8if32v2zol",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"tracking_number\": \"771066256450\",\r\n  \"courier_code\": \"fedex\",\r\n  \"order_number\": \"0001\",\r\n  \"customer_name\": \"Victor Joe\",\r\n  \"title\": \"API learning test\",\r\n  \"language\": \"en\",\r\n  \"note\": \"First test order\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://api.trackingmore.com/v4/trackings/create?application=json",
+          "protocol": "https",
+          "host": [
+            "api",
+            "trackingmore",
+            "com"
+          ],
+          "path": [
+            "v4",
+            "trackings",
+            "create"
+          ],
+          "query": [
+            {
+              "key": "application",
+              "value": "json",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "API Create trackings batch",
+      "request": {
+        "auth": {
+          "type": "apikey",
+          "apikey": [
+            {
+              "key": "key",
+              "value": "Tracking-Api-Key",
+              "type": "string"
+            },
+            {
+              "key": "value",
+              "value": "vy084zme-8c7v-yvco-iqle-9c8if32v2zol",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "[\r\n  {\r\n    \"tracking_number\": \"9261290312833844954982\",\r\n    \"courier_code\": \"fedex\"\r\n  },\r\n  {\r\n    \"tracking_number\": \"771066256450\",\r\n    \"courier_code\": \"ups\"\r\n  }\r\n]",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://api.trackingmore.com/v4/trackings/batch?application=json",
+          "protocol": "https",
+          "host": [
+            "api",
+            "trackingmore",
+            "com"
+          ],
+          "path": [
+            "v4",
+            "trackings",
+            "batch"
+          ],
+          "query": [
+            {
+              "key": "application",
+              "value": "json"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "API Get results",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "apikey",
+          "apikey": [
+            {
+              "key": "key",
+              "value": "Tracking-Api-Key",
+              "type": "string"
+            },
+            {
+              "key": "value",
+              "value": "vy084zme-8c7v-yvco-iqle-9c8if32v2zol",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://api.trackingmore.com/v4/trackings/get?tracking_numbers=9261290312833844954982",
+          "protocol": "https",
+          "host": [
+            "api",
+            "trackingmore",
+            "com"
+          ],
+          "path": [
+            "v4",
+            "trackings",
+            "get"
+          ],
+          "query": [
+            {
+              "key": "tracking_numbers",
+              "value": "9261290312833844954982"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
