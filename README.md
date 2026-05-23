@@ -29,9 +29,9 @@ This repository is intended as a portfolio project for backend/API integration r
 - JSON
 
 ## Repository Structure
-/postman
-/docs
-/screenshots
+- /postman
+- /docs
+- /screenshots
 
 ## Setup
 1. Import Postman collection
@@ -39,7 +39,10 @@ This repository is intended as a portfolio project for backend/API integration r
 3. Execute requests
 
 ## Learning objectives
-*REST APIs
-*Supply Chain workflows
-*API Authentification
+- REST APIs
+- Supply Chain workflows
+- API Authentification
+
+## Documentation
+Detailed documentation available in '/docs'
 
