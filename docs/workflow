@@ -1,0 +1,8 @@
+</> Markdown
+
+# Workflow
+
+1. User submits tracking number
+2. API request is sent
+3. Tracking data is returned
+4. Status is displayed
